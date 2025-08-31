@@ -1,5 +1,4 @@
-﻿using System.Net.Http;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 
@@ -13,7 +12,7 @@ namespace WhatsApp_GPT.Services
 
         public WhatsAppService(IConfiguration config)
         {
-            Token = config["TOKEN"] ?? throw new ArgumentNullException("TOKEN not set");
+            Token = config["WhatsAppToken"] ?? throw new ArgumentNullException("WhatsAppToken not set");
             HttpClient = new HttpClient();
         }
 
